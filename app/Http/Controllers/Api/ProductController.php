@@ -10,10 +10,11 @@ use App\Http\Resources\ProductResource;
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ * @OA\Get(
+ *     path="/projects",
+ *     @OA\Response(response="200", description="Display a listing of projects.")
+ * )
+ */
     public function index()
     {
         $products = Product::all();
